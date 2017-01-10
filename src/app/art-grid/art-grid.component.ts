@@ -9,12 +9,13 @@ import { AlbumFull } from '../dto/album-full';
 })
 export class ArtGridComponent implements OnInit {
   fullAlbum: AlbumFull;
+  errorMessage: string;
 
   constructor(private artGridService: ArtGridService) { }
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
-      albumFull => this.fullAlbum = albumFull[0].album
-    );
+      albumFull => this.fullAlbum = albumFull[0].album,
+      error => this.errorMessage = <any>error);
   }
 }

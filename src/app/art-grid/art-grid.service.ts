@@ -3,6 +3,8 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
+
 
 import { AlbumFull } from '../dto/album-full';
 
@@ -13,6 +15,12 @@ export class ArtGridService {
   getAlbum(): Observable<AlbumFull> {
     return this.http.get('app/stub-data/stub-album-full.json')
       .map((response: Response) => <AlbumFull>response.json()['items'])
-      .do(data => console.log('Album: ' + JSON.stringify(data)));
+      .do(data => console.log('Album: ' + JSON.stringify(data)))
+      .catch(this.handleError);
+  }
+
+  private handleError(error: Response) {
+    console.error(error);
+    return Observable.throw(error.json().error || 'Server Error');
   }
 }

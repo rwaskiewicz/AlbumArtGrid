@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { AlbumFull } from '../../dto/album-full';
 
@@ -7,5 +7,5 @@ import { AlbumFull } from '../../dto/album-full';
   templateUrl: './art-cell.component.html'
 })
 export class ArtCellComponent {
-  fullAlbum: AlbumFull;
+  @Input() fullAlbum: AlbumFull;
 }
