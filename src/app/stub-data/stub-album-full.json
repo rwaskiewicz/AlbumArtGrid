@@ -1,0 +1,495 @@
+{
+  "href" : "https://api.spotify.com/v1/me/albums?offset=16&limit=1",
+  "items" : [ {
+    "added_at" : "2016-09-02T14:16:05Z",
+    "album" : {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+        },
+        "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+        "id" : "4UXJsSlnKd7ltsrHebV79Q",
+        "name" : "Nick Cave & The Bad Seeds",
+        "type" : "artist",
+        "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+      } ],
+      "available_markets" : [ ],
+      "copyrights" : [ {
+        "text" : "(C) 2004 Mute Records Ltd., a BMG Company, under exclusive license to INgrooves",
+        "type" : "C"
+      }, {
+        "text" : "(P) 2004 Mute Records Ltd., a BMG Company, under exclusive license to INgrooves",
+        "type" : "P"
+      } ],
+      "external_ids" : {
+        "upc" : "889326242178"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/2q645aafMPnrAtw8CkG4k6"
+      },
+      "genres" : [ ],
+      "href" : "https://api.spotify.com/v1/albums/2q645aafMPnrAtw8CkG4k6",
+      "id" : "2q645aafMPnrAtw8CkG4k6",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/528e9771a52e66fa63b41760d847c37b5ca74868",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/b12ab05adaab1face6953d7da56d73b947a3bb7f",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/e636e697c5f81dcc6f0fc891e492b0b6c595b192",
+        "width" : 64
+      } ],
+      "label" : "Mute/BMG",
+      "name" : "Abattoir Blues / The Lyre of Orpheus",
+      "popularity" : 25,
+      "release_date" : "2004",
+      "release_date_precision" : "year",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/albums/2q645aafMPnrAtw8CkG4k6/tracks?offset=0&limit=50",
+        "items" : [ {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 305160,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/2awfv3y3WfKyHWomGc0Ed1"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/2awfv3y3WfKyHWomGc0Ed1",
+          "id" : "2awfv3y3WfKyHWomGc0Ed1",
+          "name" : "Get Ready for Love",
+          "preview_url" : null,
+          "track_number" : 1,
+          "type" : "track",
+          "uri" : "spotify:track:2awfv3y3WfKyHWomGc0Ed1"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 294146,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/1CBywEwDgldHac3KLgd0Ae"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/1CBywEwDgldHac3KLgd0Ae",
+          "id" : "1CBywEwDgldHac3KLgd0Ae",
+          "name" : "Cannibal's Hymn",
+          "preview_url" : null,
+          "track_number" : 2,
+          "type" : "track",
+          "uri" : "spotify:track:1CBywEwDgldHac3KLgd0Ae"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 391933,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/7ipEJkqCZoAoRFrpCSXPto"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/7ipEJkqCZoAoRFrpCSXPto",
+          "id" : "7ipEJkqCZoAoRFrpCSXPto",
+          "name" : "Hiding All Away",
+          "preview_url" : null,
+          "track_number" : 3,
+          "type" : "track",
+          "uri" : "spotify:track:7ipEJkqCZoAoRFrpCSXPto"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 314986,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/409RdRyoF2Hqs0H15PtZGh"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/409RdRyoF2Hqs0H15PtZGh",
+          "id" : "409RdRyoF2Hqs0H15PtZGh",
+          "name" : "Messiah Ward",
+          "preview_url" : null,
+          "track_number" : 4,
+          "type" : "track",
+          "uri" : "spotify:track:409RdRyoF2Hqs0H15PtZGh"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 317026,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/50JSAXpl0S0BQhw8PpHyvC"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/50JSAXpl0S0BQhw8PpHyvC",
+          "id" : "50JSAXpl0S0BQhw8PpHyvC",
+          "name" : "There She Goes, My Beautiful World",
+          "preview_url" : null,
+          "track_number" : 5,
+          "type" : "track",
+          "uri" : "spotify:track:50JSAXpl0S0BQhw8PpHyvC"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 294400,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/66lh1JD4eMOZKpfc5IEri2"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/66lh1JD4eMOZKpfc5IEri2",
+          "id" : "66lh1JD4eMOZKpfc5IEri2",
+          "name" : "Nature Boy",
+          "preview_url" : null,
+          "track_number" : 6,
+          "type" : "track",
+          "uri" : "spotify:track:66lh1JD4eMOZKpfc5IEri2"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 238626,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/7D0jPrfVtsm37h1Kkxz0cH"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/7D0jPrfVtsm37h1Kkxz0cH",
+          "id" : "7D0jPrfVtsm37h1Kkxz0cH",
+          "name" : "Abattoir Blues",
+          "preview_url" : null,
+          "track_number" : 7,
+          "type" : "track",
+          "uri" : "spotify:track:7D0jPrfVtsm37h1Kkxz0cH"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 266373,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/1Kw3uApJa3G9OPubKEqIZ4"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/1Kw3uApJa3G9OPubKEqIZ4",
+          "id" : "1Kw3uApJa3G9OPubKEqIZ4",
+          "name" : "Let the Bells Ring",
+          "preview_url" : null,
+          "track_number" : 8,
+          "type" : "track",
+          "uri" : "spotify:track:1Kw3uApJa3G9OPubKEqIZ4"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 1,
+          "duration_ms" : 163120,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/49FtgxvTMBD3wvGXdDEIcT"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/49FtgxvTMBD3wvGXdDEIcT",
+          "id" : "49FtgxvTMBD3wvGXdDEIcT",
+          "name" : "Fable of the Brown Ape",
+          "preview_url" : null,
+          "track_number" : 9,
+          "type" : "track",
+          "uri" : "spotify:track:49FtgxvTMBD3wvGXdDEIcT"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 336786,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/2lYISocwjyiWqitdAZ4coX"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/2lYISocwjyiWqitdAZ4coX",
+          "id" : "2lYISocwjyiWqitdAZ4coX",
+          "name" : "The Lyre of Orpheus",
+          "preview_url" : null,
+          "track_number" : 1,
+          "type" : "track",
+          "uri" : "spotify:track:2lYISocwjyiWqitdAZ4coX"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 193866,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/1Ubz3nruxbiM8orrHnUdzg"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/1Ubz3nruxbiM8orrHnUdzg",
+          "id" : "1Ubz3nruxbiM8orrHnUdzg",
+          "name" : "Breathless",
+          "preview_url" : null,
+          "track_number" : 2,
+          "type" : "track",
+          "uri" : "spotify:track:1Ubz3nruxbiM8orrHnUdzg"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 261426,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/0QiBZDB1IbfPqrqpjo4p0N"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/0QiBZDB1IbfPqrqpjo4p0N",
+          "id" : "0QiBZDB1IbfPqrqpjo4p0N",
+          "name" : "Babe, You Turn Me On",
+          "preview_url" : null,
+          "track_number" : 3,
+          "type" : "track",
+          "uri" : "spotify:track:0QiBZDB1IbfPqrqpjo4p0N"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 403400,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/3bgxDBktWhvAmj0SVjFksl"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/3bgxDBktWhvAmj0SVjFksl",
+          "id" : "3bgxDBktWhvAmj0SVjFksl",
+          "name" : "Easy Money",
+          "preview_url" : null,
+          "track_number" : 4,
+          "type" : "track",
+          "uri" : "spotify:track:3bgxDBktWhvAmj0SVjFksl"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 277253,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/01XNvGleT8KlXjeAdMlyPx"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/01XNvGleT8KlXjeAdMlyPx",
+          "id" : "01XNvGleT8KlXjeAdMlyPx",
+          "name" : "Supernaturally",
+          "preview_url" : null,
+          "track_number" : 5,
+          "type" : "track",
+          "uri" : "spotify:track:01XNvGleT8KlXjeAdMlyPx"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 265480,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/6plhyz6waZZFQC0YcW18PD"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/6plhyz6waZZFQC0YcW18PD",
+          "id" : "6plhyz6waZZFQC0YcW18PD",
+          "name" : "Spell",
+          "preview_url" : null,
+          "track_number" : 6,
+          "type" : "track",
+          "uri" : "spotify:track:6plhyz6waZZFQC0YcW18PD"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 217373,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/5q6gbjImvtxkPTm88kg1yl"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/5q6gbjImvtxkPTm88kg1yl",
+          "id" : "5q6gbjImvtxkPTm88kg1yl",
+          "name" : "Carry Me",
+          "preview_url" : null,
+          "track_number" : 7,
+          "type" : "track",
+          "uri" : "spotify:track:5q6gbjImvtxkPTm88kg1yl"
+        }, {
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4UXJsSlnKd7ltsrHebV79Q",
+            "id" : "4UXJsSlnKd7ltsrHebV79Q",
+            "name" : "Nick Cave & The Bad Seeds",
+            "type" : "artist",
+            "uri" : "spotify:artist:4UXJsSlnKd7ltsrHebV79Q"
+          } ],
+          "available_markets" : [ ],
+          "disc_number" : 2,
+          "duration_ms" : 409546,
+          "explicit" : false,
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/track/6PsviCVRcxLfrzLOxC48j9"
+          },
+          "href" : "https://api.spotify.com/v1/tracks/6PsviCVRcxLfrzLOxC48j9",
+          "id" : "6PsviCVRcxLfrzLOxC48j9",
+          "name" : "O Children",
+          "preview_url" : null,
+          "track_number" : 8,
+          "type" : "track",
+          "uri" : "spotify:track:6PsviCVRcxLfrzLOxC48j9"
+        } ],
+        "limit" : 50,
+        "next" : null,
+        "offset" : 0,
+        "previous" : null,
+        "total" : 17
+      },
+      "type" : "album",
+      "uri" : "spotify:album:2q645aafMPnrAtw8CkG4k6"
+    }
+  } ],
+  "limit" : 1,
+  "next" : "https://api.spotify.com/v1/me/albums?offset=17&limit=1",
+  "offset" : 16,
+  "previous" : "https://api.spotify.com/v1/me/albums?offset=15&limit=1",
+  "total" : 19
+}
