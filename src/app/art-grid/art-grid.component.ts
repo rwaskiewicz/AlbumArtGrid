@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AlbumFull } from '../dto/album-full';
 import { ArtGridService } from './art-grid.service';
+import { AlbumFull } from '../dto/album-full';
 
 @Component({
   selector: 'art-grid',
-  providers: [ArtGridService],
-  templateUrl: './art-grid.component.html'
+  templateUrl: './art-grid.component.html',
 })
 export class ArtGridComponent implements OnInit {
   fullAlbum: AlbumFull;
@@ -15,8 +14,7 @@ export class ArtGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
-      albumFull => this.fullAlbum = albumFull
+      albumFull => this.fullAlbum = albumFull[0].album
     );
-    console.log(this.fullAlbum);
   }
 }
