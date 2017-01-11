@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { AlbumFull } from '../../dto/album-full';
 
@@ -13,11 +13,19 @@ export class ArtCellComponent {
   constructor(private dialog: MdDialog) { }
 
   openAlbumDetails() {
-    let dialogRef = this.dialog.open(CellDetailsComponent);
+    this.dialog.open(CellDetailsComponent);
   }
 }
 
 @Component({
-  template: `<p>Details Here!</p>`
+  template: `
+    <h1 md-dialog-title>Album Title</h1>
+    <div md-dialog-content>Album Details</div>
+    <div md-dialog-actions>
+      <button md-button (click)="dialogRef.close()">Close</button>
+    </div>
+`
 })
-export class CellDetailsComponent {}
+export class CellDetailsComponent {
+  constructor(public dialogRef: MdDialogRef<CellDetailsComponent>) { }
+}
