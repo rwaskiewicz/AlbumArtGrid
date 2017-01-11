@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 import { ArtGridModule } from './art-grid/art-grid.module';
 // import { ArtGridComponent } from './art-grid/art-grid.component';
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ArtGridModule
+    ArtGridModule,
+    MaterialModule.forRoot()
   ],
   declarations: [
     AppComponent

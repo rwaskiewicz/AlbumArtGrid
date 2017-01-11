@@ -1,4 +1,6 @@
-<img src={{fullAlbum?.images[1].url}}>
+<button md-button (click)="openAlbumDetails()">
+  <img src={{fullAlbum?.images[1].url}}>
+</button>
 <div class="col-md-12">
   <p>Album: {{fullAlbum?.name}}</p>
   <p>Album: {{fullAlbum?.artists[0].name}}</p>
