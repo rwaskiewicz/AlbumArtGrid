@@ -13,7 +13,7 @@ export class ArtGridComponent implements OnInit {
   errorMessage: string;
 
   constructor(private artGridService: ArtGridService, private timingService: TimingService) {
-    console.log('Got: ', timingService.emitRandomIndex(1));
+    console.log('Got: ', timingService.emitRandomIndex([0]));
   }
 
   ngOnInit(): void {
