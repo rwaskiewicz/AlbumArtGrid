@@ -1,18 +1,23 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class TimingService {
+  private upperBounds: number;
   private emitIntervalInMilliseconds: number = 1000;
-  @Output() indexEmitter: EventEmitter<number> = new EventEmitter();
 
-  // TODO: Seed this with the upper bound based on screen resolution
+  //TODO: Make the upper bounds an argument to be set dynamically
   constructor() {
-    setInterval(() => {
-      this.emitRandomIndex([0]);
-    }, this.emitIntervalInMilliseconds);
+    this.upperBounds = 10;
   }
 
-  emitRandomIndex(unavailableIndices: number[]): void {
-    this.indexEmitter.emit(Math.floor(Math.random() * unavailableIndices.length));
+  emitRandomIndex(): Observable<number> {
+    return Observable
+      .interval(this.emitIntervalInMilliseconds)
+      .map(() => {
+        let rand = Math.floor(Math.random() * this.upperBounds);
+        console.log(rand);
+        return rand;
+      });
   }
 }
