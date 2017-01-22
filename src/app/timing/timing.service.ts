@@ -8,7 +8,7 @@ export class TimingService {
 
   //TODO: Make the upper bounds an argument to be set dynamically
   constructor() {
-    this.upperBounds = 10;
+    this.upperBounds = 20;
   }
 
   emitRandomIndex(): Observable<number> {

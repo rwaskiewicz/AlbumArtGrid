@@ -1,2 +1,5 @@
 <p>This is the grid</p>
-<art-cell [fullAlbum]="fullAlbum"></art-cell>
+<div *ngFor="let number of identifiers; let i = index">
+  <art-cell [identifier]="i" [fullAlbum]="fullAlbum">
+  </art-cell>
+</div>
