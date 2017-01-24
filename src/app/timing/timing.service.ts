@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class TimingService {
   private upperBounds: number;
-  private emitIntervalInMilliseconds: number = 1000;
+  private emitIntervalInMilliseconds: number = 2000;
 
-  //TODO: Make the upper bounds an argument to be set dynamically
+  // TODO: Make the upper bounds an argument to be set dynamically
   constructor() {
-    this.upperBounds = 20;
+    this.upperBounds = 5;
   }
 
   emitRandomIndex(): Observable<number> {
