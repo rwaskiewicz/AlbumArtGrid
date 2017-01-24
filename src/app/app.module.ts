@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { ArtGridModule } from './art-grid/art-grid.module';
-// import { ArtGridComponent } from './art-grid/art-grid.component';
 import { AppComponent } from './app.component';
 
 @NgModule({

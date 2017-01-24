@@ -17,7 +17,7 @@ export class ArtCellComponent {
     timingService.emitRandomIndex().subscribe(
       index => {
         if (index === this.identifier) {
-          this.openAlbumDetails();
+          // TODO: Implement transition
         }
       }
     )

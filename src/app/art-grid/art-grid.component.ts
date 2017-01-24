@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ArtGridService } from './art-grid.service';
 import { AlbumFull } from '../dto/album-full';
+import { WindowService } from '../window/window.service';
 
 @Component({
   selector: 'art-grid',
@@ -13,7 +14,7 @@ export class ArtGridComponent implements OnInit {
   index: number;
   identifiers: number[] = [0];
 
-  constructor(private artGridService: ArtGridService) { }
+  constructor(private artGridService: ArtGridService, private windowService: WindowService) { }
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
