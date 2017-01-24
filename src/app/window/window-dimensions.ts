@@ -1,4 +1,9 @@
 export class WindowDimensions {
-  availableHeight: number;
-  availableWidth: number;
+  numberOfColumns: number;
+  numberOfRows: number;
+
+  constructor(numberOfColumns = 0, numberOfRows = 0) {
+    this.numberOfColumns = numberOfColumns;
+    this.numberOfRows = numberOfRows;
+  }
 }

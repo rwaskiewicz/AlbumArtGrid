@@ -5,11 +5,18 @@ import {WindowDimensions} from './window-dimensions';
 @Injectable()
 export class WindowService {
   private windowDimensions = new WindowDimensions();
+  // TODO: Temporary placement/hardcoding
+  private albumArtWidthPixels: number = 300;
 
   // TODO: This doesn't handle resizing or anything
   constructor() {
-    this.windowDimensions.availableHeight = window.innerHeight;
-    this.windowDimensions.availableWidth = window.innerWidth;
     console.log(this.windowDimensions);
+  }
+
+  calculateGridSize(): WindowDimensions {
+    let numberOfColumns = Math.floor(window.innerWidth / this.albumArtWidthPixels);
+    let numberOfRows = Math.floor(window.innerHeight / this.albumArtWidthPixels);
+
+    return new WindowDimensions(numberOfColumns, numberOfRows);
   }
 }
