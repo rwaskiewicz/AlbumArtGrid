@@ -15,6 +15,8 @@ export class ArtGridComponent implements OnInit {
   index: number;
   identifiers: number[] = [0];
   windowDimensions: WindowDimensions;
+  rows: number[];
+  columns: number[];
 
   constructor(private artGridService: ArtGridService, private windowService: WindowService) { }
 
@@ -22,7 +24,13 @@ export class ArtGridComponent implements OnInit {
     this.artGridService.getAlbum().subscribe(
       albumFull => this.fullAlbum = albumFull[0].album,
       error => this.errorMessage = <any>error);
-    this.windowDimensions = this.windowService.calculateGridSize();
-    console.log(this.windowDimensions);
+    this.setupGrid();
+  }
+
+  setupGrid(): void {
+    let dimensions = this.windowService.calculateGridSize();
+    console.log('Got dimensions ', dimensions);
+    this.rows = new Array(dimensions.numberOfRows);
+    this.columns = new Array(dimensions.numberOfColumns);
   }
 }

@@ -1,5 +1,11 @@
 <p>This is the grid</p>
-<div *ngFor="let number of identifiers; let i = index">
-  <art-cell [identifier]="i" [fullAlbum]="fullAlbum">
-  </art-cell>
-</div>
+<table class="table">
+  <tbody>
+    <tr *ngFor="let rowNumber of rows; let i = index">
+      <th *ngFor="let colNumber of columns; let j = index">
+        <art-cell [identifier]="i" [fullAlbum]="fullAlbum">
+        </art-cell>
+      </th>
+    </tr>
+  </tbody>
+</table>
