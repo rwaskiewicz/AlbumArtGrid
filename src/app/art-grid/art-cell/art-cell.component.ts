@@ -20,7 +20,7 @@ export class ArtCellComponent {
           // TODO: Implement transition
         }
       }
-    )
+    );
   }
 
   openAlbumDetails() {
