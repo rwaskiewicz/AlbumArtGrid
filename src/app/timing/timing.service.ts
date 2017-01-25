@@ -1,16 +1,18 @@
 import { Injectable, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { WindowService} from '../window/window.service';
+
 @Injectable()
 export class TimingService {
   private upperBounds: number;
-  private emitIntervalInMilliseconds: number = 2000;
+  private emitIntervalInMilliseconds: number = 10000;
 
-  // TODO: Make the upper bounds an argument to be set dynamically
-  constructor() {
-    this.upperBounds = 5;
+  constructor(private windowService: WindowService) {
+    this.upperBounds = windowService.calculateTotalNumberOfCells();
   }
 
+  // TODO: Bug wherein there are this.upperBounds running services at once
   emitRandomIndex(): Observable<number> {
     return Observable
       .interval(this.emitIntervalInMilliseconds)

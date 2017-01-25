@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {WindowDimensions} from './window-dimensions';
+import { WindowDimensions } from './window-dimensions';
 
 @Injectable()
 export class WindowService {
@@ -14,9 +14,18 @@ export class WindowService {
   }
 
   calculateGridSize(): WindowDimensions {
-    let numberOfColumns = Math.floor(window.innerWidth / this.albumArtWidthPixels);
-    let numberOfRows = Math.floor(window.innerHeight / this.albumArtWidthPixels);
+    return new WindowDimensions(this.calculateColumnCount(), this.calculateRowCount());
+  }
 
-    return new WindowDimensions(numberOfColumns, numberOfRows);
+  calculateTotalNumberOfCells(): number {
+    return this.calculateColumnCount() * this.calculateRowCount();
+  }
+
+  private calculateColumnCount(): number {
+    return Math.floor(window.innerWidth / this.albumArtWidthPixels);
+  }
+
+  private calculateRowCount(): number {
+    return Math.floor(window.innerHeight / this.albumArtWidthPixels);
   }
 }
