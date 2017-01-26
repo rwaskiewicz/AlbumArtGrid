@@ -1,10 +1,11 @@
 <table class="table">
   <tbody>
-    <tr *ngFor="let rowNumber of rows; let i = index">
-      <th *ngFor="let colNumber of columns; let j = index">
-        <art-cell [identifier]="i" [fullAlbum]="fullAlbum">
+    <tr *ngFor="let rowNumber of rows; let currentRow = index">
+      <td *ngFor="let colNumber of columns; let currentColumn = index">
+        <art-cell [identifier]="(currentRow*columns.length)+currentColumn"
+                  [fullAlbum]="fullAlbum">
         </art-cell>
-      </th>
+      </td>
     </tr>
   </tbody>
 </table>

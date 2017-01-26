@@ -18,13 +18,14 @@ export class ArtGridComponent implements OnInit {
   rows: number[];
   columns: number[];
 
-  constructor(private artGridService: ArtGridService, private windowService: WindowService) { }
+  constructor(private artGridService: ArtGridService, private windowService: WindowService) {
+    this.setupGrid();
+  }
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
       albumFull => this.fullAlbum = albumFull[0].album,
       error => this.errorMessage = <any>error);
-    this.setupGrid();
   }
 
   setupGrid(): void {
