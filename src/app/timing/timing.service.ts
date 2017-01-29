@@ -6,7 +6,7 @@ import { WindowService} from '../window/window.service';
 @Injectable()
 export class TimingService {
   private upperBounds: number;
-  private emitIntervalInMilliseconds: number = 10000;
+  private emitIntervalInMilliseconds: number = 1000;
 
   constructor(private windowService: WindowService) {
     this.upperBounds = windowService.calculateTotalNumberOfCells();

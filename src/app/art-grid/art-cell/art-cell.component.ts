@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { AlbumFull } from '../../dto/album-full';
@@ -9,22 +9,17 @@ import { TimingService } from '../../timing/timing.service';
   selector: 'art-cell',
   templateUrl: './art-cell.component.html'
 })
-export class ArtCellComponent implements OnInit {
+export class ArtCellComponent implements OnChanges {
   @Input() identifier: number;
   @Input() fullAlbum: AlbumFull;
+  @Input() currentIndex: number;
 
   constructor(private dialog: MdDialog, private timingService: TimingService) { }
 
-  ngOnInit(): void {
-    this.timingService.emitRandomIndex().subscribe(
-      index => {
-        if (index === this.identifier) {
-          console.log('Hit for ', this.identifier, index);
-        } else {
-          console.log('Miss for ', this.identifier, index);
-        }
-      }
-    );
+  ngOnChanges(): void {
+    if (this.identifier === this.currentIndex) {
+      console.log('Hit on', this.currentIndex);
+    }
   }
 
   openAlbumDetails() {

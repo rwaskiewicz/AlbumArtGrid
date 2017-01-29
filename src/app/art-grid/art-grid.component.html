@@ -3,6 +3,7 @@
     <tr *ngFor="let rowNumber of rows; let currentRow = index">
       <td *ngFor="let colNumber of columns; let currentColumn = index">
         <art-cell [identifier]="(currentRow*columns.length)+currentColumn"
+                  [currentIndex]="index"
                   [fullAlbum]="fullAlbum">
         </art-cell>
       </td>
