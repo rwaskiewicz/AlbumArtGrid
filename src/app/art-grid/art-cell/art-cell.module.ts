@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 
-import { ArtCellComponent, CellDetailsComponent } from './art-cell.component';
-import { TimingModule } from '../../timing/timing.module';
+import { ArtCellComponent } from './art-cell.component';
+import { ArtCellModalModule } from '../art-cell-modal/art-cell-modal.module';
 
 @NgModule({
-  declarations: [ArtCellComponent, CellDetailsComponent],
-  entryComponents: [CellDetailsComponent],
+  imports: [ArtCellModalModule],
+  declarations: [ArtCellComponent],
   exports: [
-    ArtCellComponent, CellDetailsComponent
-  ],
-  imports: [TimingModule]
+    ArtCellComponent
+  ]
 })
 export class ArtCellModule { }
