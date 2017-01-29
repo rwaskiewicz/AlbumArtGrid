@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
 import { AlbumFull } from '../../dto/album-full';
@@ -9,12 +10,22 @@ import { TimingService } from '../../timing/timing.service';
 
 @Component({
   selector: 'art-cell',
-  templateUrl: './art-cell.component.html'
+  templateUrl: './art-cell.component.html',
+  animations: [
+    trigger('albumState', [
+      state('idle', style({height: '*'})),
+      transition('* => *', [
+        style({height: '*'}),
+        animate(250, style({height: 0}))
+      ])
+    ])
+  ]
 })
 export class ArtCellComponent implements OnChanges {
   @Input() identifier: number;
   @Input() fullAlbum: AlbumFull;
   @Input() currentIndex: number;
+  state;
 
   constructor(private dialog: MdDialog, private timingService: TimingService) { }
 
@@ -28,5 +39,10 @@ export class ArtCellComponent implements OnChanges {
     let dialogRef = this.dialog.open(ArtCellModalComponent);
     dialogRef.componentInstance.title = this.fullAlbum.name;
     dialogRef.componentInstance.body = this.fullAlbum.artists[0].name;
+  }
+
+  changeState() {
+    this.state = 'idle';
+    console.log('did it');
   }
 }
