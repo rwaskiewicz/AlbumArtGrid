@@ -1,3 +1,5 @@
-<button md-button (click)="openAlbumDetails()">
+<!--<button md-button (click)="openAlbumDetails()">-->
+<div (click)="changeState()" [@albumState]="isFlipped">
   <img src={{fullAlbum?.images[1].url}}>
-</button>
+</div>
+<!--</button>-->
