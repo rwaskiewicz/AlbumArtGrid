@@ -13,11 +13,10 @@ import { TimingService } from '../../timing/timing.service';
   templateUrl: './art-cell.component.html',
   animations: [
     trigger('albumState', [
-      state('idle', style({height: '*'})),
-      transition('* => *', [
-        style({height: '*'}),
-        animate(250, style({height: 0}))
-      ])
+      state('true' , style({ opacity: 1, transform: 'scale(1.0)' })),
+      state('false', style({ opacity: 0.5, transform: 'scale(0.50)'  })),
+      transition('1 => 0', animate('300ms')),
+      transition('0 => 1', animate('900ms'))
     ])
   ]
 })
@@ -25,7 +24,7 @@ export class ArtCellComponent implements OnChanges {
   @Input() identifier: number;
   @Input() fullAlbum: AlbumFull;
   @Input() currentIndex: number;
-  state;
+  private isFlipped = true;
 
   constructor(private dialog: MdDialog, private timingService: TimingService) { }
 
@@ -42,7 +41,7 @@ export class ArtCellComponent implements OnChanges {
   }
 
   changeState() {
-    this.state = 'idle';
-    console.log('did it');
+    this.isFlipped = !this.isFlipped;
+    console.log('did it', this.isFlipped);
   }
 }
