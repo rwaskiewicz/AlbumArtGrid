@@ -10,13 +10,14 @@ import { TimingService } from '../../timing/timing.service';
 
 @Component({
   selector: 'art-cell',
+  styleUrls: ['./art-cell.component.css'],
   templateUrl: './art-cell.component.html',
   animations: [
     trigger('albumState', [
-      state('true' , style({ opacity: 1, transform: 'scale(1.0)' })),
-      state('false', style({ opacity: 0.5, transform: 'scale(0.50)'  })),
-      transition('1 => 0', animate('300ms')),
-      transition('0 => 1', animate('900ms'))
+      state('true' , style({ opacity: 1})),
+      state('false', style({ opacity: 0.5})),
+      transition('1 => 0', animate('300ms', style({transform: 'rotateY(180deg)'}))),
+      transition('0 => 1', animate('300ms', style({transform: 'rotateY(180deg)'})))
     ])
   ]
 })
