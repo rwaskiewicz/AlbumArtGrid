@@ -10,7 +10,6 @@ import { TimingService } from '../../timing/timing.service';
 
 @Component({
   selector: 'art-cell',
-  styleUrls: ['./art-cell.component.css'],
   templateUrl: './art-cell.component.html',
   animations: [
     trigger('albumState', [
