@@ -26,7 +26,8 @@ export class ArtCellComponent implements OnChanges {
   @Input() currentIndex: number;
   private isFlipped = true;
 
-  constructor(private dialog: MdDialog, private timingService: TimingService) { }
+  constructor(private dialog: MdDialog, private timingService: TimingService) { 
+  }
 
   ngOnChanges(): void {
     if (this.identifier === this.currentIndex) {

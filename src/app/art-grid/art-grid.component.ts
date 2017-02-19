@@ -4,7 +4,6 @@ import { ArtGridService } from './art-grid.service';
 import { AlbumFull } from '../dto/album-full';
 import { TimingService } from '../timing/timing.service';
 import { WindowService } from '../window/window.service';
-import { WindowDimensions } from '../window/window-dimensions';
 
 @Component({
   selector: 'art-grid',
@@ -12,10 +11,10 @@ import { WindowDimensions } from '../window/window-dimensions';
 })
 export class ArtGridComponent implements OnInit {
   fullAlbum: AlbumFull;
+  initialAlbums: AlbumFull[];
   errorMessage: string;
   index: number;
-  identifiers: number[] = [0];
-  windowDimensions: WindowDimensions;
+
   rows: number[];
   columns: number[];
 
@@ -25,9 +24,10 @@ export class ArtGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
-      //TODO: ArtGridService will need some concept of size at some point
-      albumFull => this.fullAlbum = albumFull[0].album,
-      error => this.errorMessage = <any>error);
+      allAlbums => this.fullAlbum = allAlbums[0],
+      error => this.errorMessage = <any>error,
+      () => console.log('Results are',  JSON.stringify(this.fullAlbum))
+    );
 
     this.timingService.emitRandomIndex().subscribe(
       index => {
@@ -38,9 +38,7 @@ export class ArtGridComponent implements OnInit {
   }
 
   setupGrid(): void {
-    let dimensions = this.windowService.calculateGridSize();
-    console.log('Got dimensions ', dimensions);
-    this.rows = new Array(dimensions.numberOfRows);
-    this.columns = new Array(dimensions.numberOfColumns);
+    this.rows = new Array(this.windowService.calculateRowCount());
+    this.columns = new Array(this.windowService.calculateColumnCount());
   }
 }

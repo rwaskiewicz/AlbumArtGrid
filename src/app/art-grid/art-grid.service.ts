@@ -11,9 +11,15 @@ import { AlbumFull } from '../dto/album-full';
 export class ArtGridService {
   constructor(private http: Http) { }
 
-  getAlbum(): Observable<AlbumFull> {
+  // TODO: Cleanup
+  getAlbum(): Observable<AlbumFull[]> {
     return this.http.get('app/stub-data/stub-album-full.json')
-      .map((response: Response) => <AlbumFull>response.json()['items'])
+      .map((response: Response) => {
+        return response.json()['items'].map((item) => {
+          return item.album;
+        });
+      })
+      //.do((response) => console.log(response))
       .catch(this.handleError);
   }
 
