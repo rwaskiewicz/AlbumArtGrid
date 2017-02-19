@@ -10,7 +10,6 @@ import { WindowService } from '../window/window.service';
   templateUrl: './art-grid.component.html',
 })
 export class ArtGridComponent implements OnInit {
-  fullAlbum: AlbumFull;
   initialAlbums: AlbumFull[];
   errorMessage: string;
   index: number;
@@ -24,9 +23,10 @@ export class ArtGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
-      allAlbums => this.fullAlbum = allAlbums[0],
-      error => this.errorMessage = <any>error,
-      () => console.log('Results are',  JSON.stringify(this.fullAlbum))
+      allAlbums => {
+        this.initialAlbums = allAlbums;
+      },
+      error => this.errorMessage = <any>error
     );
 
     this.timingService.emitRandomIndex().subscribe(

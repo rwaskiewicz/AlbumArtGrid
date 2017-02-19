@@ -4,7 +4,7 @@
       <td *ngFor="let colNumber of columns; let currentColumn = index">
         <art-cell [identifier]="(currentRow*columns.length)+currentColumn"
                   [currentIndex]="index"
-                  [fullAlbum]="fullAlbum">
+                  [fullAlbum]="initialAlbums ? initialAlbums[(currentRow*columns.length)+currentColumn] : null">
         </art-cell>
       </td>
     </tr>
