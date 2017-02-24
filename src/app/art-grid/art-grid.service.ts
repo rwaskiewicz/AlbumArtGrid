@@ -13,7 +13,7 @@ export class ArtGridService {
 
   // TODO: Cleanup
   getAlbum(): Observable<AlbumFull[]> {
-    return this.http.get('app/stub-data/stub-album-full.json')
+    return this.http.get('src/app/stub-data/stub-album-full.json')
       .map((response: Response) => {
         return response.json()['items'].map((item) => {
           return item.album;
