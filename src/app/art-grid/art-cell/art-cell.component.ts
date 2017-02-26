@@ -10,13 +10,16 @@ import { TimingService } from '../../timing/timing.service';
 
 @Component({
   selector: 'art-cell',
+  styleUrls: ['./art-cell.component.css'],
   templateUrl: './art-cell.component.html',
   animations: [
     trigger('albumState', [
-      state('true' , style({ opacity: 1})),
-      state('false', style({ opacity: 0.5})),
-      transition('1 => 0', animate('300ms', style({transform: 'rotateY(180deg)'}))),
-      transition('0 => 1', animate('300ms', style({transform: 'rotateY(180deg)'})))
+      state('true', style({
+        transform: 'rotateY(180deg)',
+      })),
+      state('false', style({
+        transform: 'rotateY(0deg)',
+      }))
     ])
   ]
 })
@@ -24,9 +27,10 @@ export class ArtCellComponent implements OnChanges {
   @Input() identifier: number;
   @Input() fullAlbum: AlbumFull;
   @Input() currentIndex: number;
-  private isFlipped = true;
+  private isFlipped = false;
+  private altUrl = 'https://i.scdn.co/image/dfd044738243446dfe81a92e01a296dab21e43f1';
 
-  constructor(private dialog: MdDialog, private timingService: TimingService) { 
+  constructor(private dialog: MdDialog, private timingService: TimingService) {
   }
 
   ngOnChanges(): void {
@@ -43,6 +47,6 @@ export class ArtCellComponent implements OnChanges {
 
   changeState() {
     this.isFlipped = !this.isFlipped;
-    console.log('did it', this.isFlipped);
+    console.log('Flip State is now: ', this.isFlipped);
   }
 }

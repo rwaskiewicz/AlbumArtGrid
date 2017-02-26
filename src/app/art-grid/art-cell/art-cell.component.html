@@ -1,6 +1,12 @@
 <!--<button md-button (click)="openAlbumDetails()">-->
-<div (click)="changeState()"
-     [@albumState]="isFlipped">
-  <img src={{fullAlbum?.images[1].url}}>
+<div class="album_card_container">
+  <div class="album_card" (click)="changeState()" [@albumState]="isFlipped">
+    <div class="front album_card_side">
+      <img src={{fullAlbum?.images[1].url}}> 
+    </div>
+    <div class="album_card_back album_card_side">
+      <img src={{altUrl}}> 
+    </div>
+  </div>
 </div>
 <!--</button>-->
