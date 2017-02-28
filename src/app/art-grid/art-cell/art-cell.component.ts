@@ -35,7 +35,7 @@ export class ArtCellComponent implements OnChanges {
 
   ngOnChanges(): void {
     if (this.identifier === this.currentIndex) {
-      console.log('Hit on', this.currentIndex);
+      this.changeState();
     }
   }
 
@@ -47,6 +47,6 @@ export class ArtCellComponent implements OnChanges {
 
   changeState() {
     this.isFlipped = !this.isFlipped;
-    console.log('Flip State is now: ', this.isFlipped);
+    console.log(`Flip State is now: ${this.isFlipped} for ${this.currentIndex}`);
   }
 }
