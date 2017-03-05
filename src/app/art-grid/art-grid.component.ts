@@ -7,6 +7,7 @@ import { WindowService } from '../window/window.service';
 
 @Component({
   selector: 'art-grid',
+  styleUrls: ['art-grid.component.css'],
   templateUrl: './art-grid.component.html',
 })
 export class ArtGridComponent implements OnInit {
