@@ -33,6 +33,7 @@ export class ArtCellComponent implements OnChanges {
   constructor(private dialog: MdDialog, private timingService: TimingService) {
   }
 
+  // TODO: ngOnChanges isn't firing perhaps due to same value being emitted
   ngOnChanges(): void {
     if (this.identifier === this.currentIndex) {
       this.changeState();

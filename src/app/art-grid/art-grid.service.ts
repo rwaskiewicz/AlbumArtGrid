@@ -9,6 +9,8 @@ import { AlbumFull } from '../dto/album-full';
 
 @Injectable()
 export class ArtGridService {
+  allAlbums: AlbumFull[];
+
   constructor(private http: Http) { }
 
   // TODO: Cleanup
@@ -19,12 +21,25 @@ export class ArtGridService {
           return item.album;
         });
       })
-      //.do((response) => console.log(response))
+      .do((response) => {
+        this.allAlbums = this.shuffleAlbums(response);
+      })
       .catch(this.handleError);
   }
 
   private handleError(error: Response) {
     console.error(error);
     return Observable.throw(error.json().error || 'Server Error');
+  }
+
+  private shuffleAlbums(albums: AlbumFull[]) {
+    for (let currentIndex = albums.length - 1; currentIndex > 0; currentIndex--) {
+      let randomIndex = Math.floor(Math.random() * (currentIndex + 1));
+      let valuePlaceholder = albums[currentIndex];
+
+      albums[currentIndex] = albums[randomIndex];
+      albums[randomIndex] = valuePlaceholder;
+    }
+    return albums;
   }
 }
