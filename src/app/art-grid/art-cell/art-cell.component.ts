@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/core';
+import { trigger, state, style } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
 import { AlbumFull } from '../../dto/album-full';

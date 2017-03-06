@@ -42,4 +42,11 @@ export class ArtGridService {
     }
     return albums;
   }
+
+  // TODO: WIP/ Note that is a public method!
+  public getNextAlbum(): AlbumFull {
+    let nextAlbum: AlbumFull = this.allAlbums.shift();
+    this.allAlbums.push(nextAlbum);
+    return nextAlbum;
+  }
 }

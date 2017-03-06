@@ -34,6 +34,9 @@ export class ArtGridComponent implements OnInit {
       index => {
         console.log('got index', index);
         this.index = index;
+        // TODO: Need to define source of truth for this - currently getting shallow copy of data? Or is the issue there isn't enough?
+        // let nextAlbum = this.artGridService.getNextAlbum();
+        // console.log('and album ', nextAlbum);
       }
     );
   }
