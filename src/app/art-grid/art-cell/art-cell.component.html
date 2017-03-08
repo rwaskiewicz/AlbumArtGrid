@@ -2,10 +2,10 @@
 <div class="album_card_container">
   <div class="album_card" (click)="changeState()" [@albumState]="isFlipped">
     <div class="front album_card_side">
-      <img src={{fullAlbum?.images[1].url}}> 
+      <img src={{mainUrl}}>
     </div>
     <div class="album_card_back album_card_side">
-      <img src={{altUrl}}> 
+      <img src={{altUrl}}>
     </div>
   </div>
 </div>

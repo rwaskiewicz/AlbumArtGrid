@@ -25,11 +25,7 @@ export class ArtGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
-      allAlbums => {
-        for (let i = 0; i < (this.rows.length * this.columns.length); i++) {
-          this.initialAlbums.push(this.artGridService.getNextAlbum());
-        }
-      },
+      () => this.fillGrid(),
       error => this.errorMessage = <any>error
     );
 
@@ -37,13 +33,18 @@ export class ArtGridComponent implements OnInit {
       index => {
         console.log('got index', index);
         this.index = index;
-        let nextAlbum = this.artGridService.getNextAlbum();
       }
     );
   }
 
-  setupGrid(): void {
+  private setupGrid(): void {
     this.rows = new Array(this.windowService.calculateRowCount());
     this.columns = new Array(this.windowService.calculateColumnCount());
+  }
+
+  private fillGrid(): void {
+    for (let i = 0; i < (this.rows.length * this.columns.length); i++) {
+      this.initialAlbums.push(this.artGridService.getNextAlbum());
+    }
   }
 }

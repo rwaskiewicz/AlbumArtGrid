@@ -23,14 +23,19 @@ import { TimingService } from '../../timing/timing.service';
     ])
   ]
 })
-export class ArtCellComponent implements OnChanges {
+export class ArtCellComponent implements OnInit, OnChanges {
   @Input() identifier: number;
   @Input() fullAlbum: AlbumFull;
   @Input() currentIndex: number;
   private isFlipped = false;
+  private mainUrl = 'https://i.scdn.co/image/dfd044738243446dfe81a92e01a296dab21e43f1';
   private altUrl = 'https://i.scdn.co/image/dfd044738243446dfe81a92e01a296dab21e43f1';
 
-  constructor(private dialog: MdDialog, private timingService: TimingService) {
+  constructor(private dialog: MdDialog, private timingService: TimingService, private artGridService: ArtGridService) {
+  }
+
+  // TODO: CONSIDER MOVING artGridService CALLS HERE.  IMPL OF MULTI STREAMS?
+  ngOnInit(): void {
   }
 
   // TODO: ngOnChanges isn't firing perhaps due to same value being emitted
@@ -47,6 +52,12 @@ export class ArtCellComponent implements OnChanges {
   }
 
   changeState() {
+    let nextAlbum = this.artGridService.getNextAlbum();
+    if (this.isFlipped) {
+      this.mainUrl = nextAlbum.images[1].url;
+    } else {
+      this.altUrl = nextAlbum.images[1].url;
+    }
     this.isFlipped = !this.isFlipped;
     console.log(`Flip State is now: ${this.isFlipped} for ${this.currentIndex}`);
   }
