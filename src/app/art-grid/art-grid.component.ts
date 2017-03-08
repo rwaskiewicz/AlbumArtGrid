@@ -11,7 +11,7 @@ import { WindowService } from '../window/window.service';
   templateUrl: './art-grid.component.html',
 })
 export class ArtGridComponent implements OnInit {
-  initialAlbums: AlbumFull[];
+  initialAlbums: AlbumFull[] = [];
   errorMessage: string;
   index: number;
 
@@ -19,13 +19,16 @@ export class ArtGridComponent implements OnInit {
   columns: number[];
 
   constructor(private artGridService: ArtGridService, private windowService: WindowService, private timingService: TimingService) {
+    this.initialAlbums = [];
     this.setupGrid();
   }
 
   ngOnInit(): void {
     this.artGridService.getAlbum().subscribe(
       allAlbums => {
-        this.initialAlbums = allAlbums;
+        for (let i = 0; i < (this.rows.length * this.columns.length); i++) {
+          this.initialAlbums.push(this.artGridService.getNextAlbum());
+        }
       },
       error => this.errorMessage = <any>error
     );
@@ -34,9 +37,7 @@ export class ArtGridComponent implements OnInit {
       index => {
         console.log('got index', index);
         this.index = index;
-        // TODO: Need to define source of truth for this - currently getting shallow copy of data? Or is the issue there isn't enough?
-        // let nextAlbum = this.artGridService.getNextAlbum();
-        // console.log('and album ', nextAlbum);
+        let nextAlbum = this.artGridService.getNextAlbum();
       }
     );
   }
