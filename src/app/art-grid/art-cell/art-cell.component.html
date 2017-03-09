@@ -1,12 +1,12 @@
-<!--<button md-button (click)="openAlbumDetails()">-->
-<div class="album_card_container">
-  <div class="album_card" (click)="changeState()" [@albumState]="isFlipped">
-    <div class="front album_card_side">
-      <img src={{primaryAlbum?.images[1].url}}>
-    </div>
-    <div class="album_card_back album_card_side">
-      <img src={{secondaryAlbum?.images[1].url}}>
+<button md-button (click)="openAlbumDetails()">
+  <div class="album_card_container">
+    <div class="album_card" [@albumState]="isFlipped">
+      <div class="front album_card_side">
+        <img src={{primaryAlbum?.images[1].url}}>
+      </div>
+      <div class="album_card_back album_card_side">
+        <img src={{secondaryAlbum?.images[1].url}}>
+      </div>
     </div>
   </div>
-</div>
-<!--</button>-->
+</button>

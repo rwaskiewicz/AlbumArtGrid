@@ -29,6 +29,7 @@ export class ArtCellComponent implements OnChanges {
   @Input() currentIndex: number;
   secondaryAlbum: AlbumFull;
   private isFlipped = false;
+  private isSelected = false;
 
   constructor(private dialog: MdDialog, private timingService: TimingService, private artGridService: ArtGridService) {
   }
@@ -40,15 +41,21 @@ export class ArtCellComponent implements OnChanges {
   }
 
   private changeState(): void {
-    let nextAlbum = this.artGridService.getNextAlbum();
-    this.isFlipped ? this.primaryAlbum = nextAlbum : this.secondaryAlbum = nextAlbum;
+    if (!this.isSelected) {
+      let nextAlbum = this.artGridService.getNextAlbum();
+      this.isFlipped ? this.primaryAlbum = nextAlbum : this.secondaryAlbum = nextAlbum;
 
-    this.isFlipped = !this.isFlipped;
+      this.isFlipped = !this.isFlipped;
+    }
   }
 
   private openAlbumDetails() {
+    this.isSelected = true;
+
     let dialogRef = this.dialog.open(ArtCellModalComponent);
     dialogRef.componentInstance.title = this.primaryAlbum.name;
     dialogRef.componentInstance.body = this.primaryAlbum.artists[0].name;
+
+    this.dialog.afterAllClosed.subscribe(() => this.isSelected = false);
   }
 }
