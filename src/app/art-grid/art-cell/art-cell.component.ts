@@ -50,11 +50,14 @@ export class ArtCellComponent implements OnChanges {
   }
 
   private openAlbumDetails() {
+    let currentAlbum: AlbumFull;
+    this.isFlipped ? currentAlbum = this.secondaryAlbum : currentAlbum = this.primaryAlbum;
+
     this.isSelected = true;
 
     let dialogRef = this.dialog.open(ArtCellModalComponent);
-    dialogRef.componentInstance.title = this.primaryAlbum.name;
-    dialogRef.componentInstance.body = this.primaryAlbum.artists[0].name;
+    dialogRef.componentInstance.title = currentAlbum.name;
+    dialogRef.componentInstance.body = currentAlbum.artists[0].name;
 
     this.dialog.afterAllClosed.subscribe(() => this.isSelected = false);
   }
