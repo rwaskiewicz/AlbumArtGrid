@@ -14,15 +14,15 @@ export class ArtGridService {
   constructor(private http: Http) { }
 
   // TODO: Cleanup
-  getAlbum(): Observable<AlbumFull[]> {
+  getAlbum() {
     return this.http.get('src/app/stub-data/stub-album-full.json')
       .map((response: Response) => {
         return response.json()['items'].map((item) => {
           return item.album;
         });
       })
-      .do((response) => {
-        this.allAlbums = this.shuffleAlbums(response);
+      .do((albums: AlbumFull[]) => {
+        this.allAlbums = this.shuffleAlbums(albums);
       })
       .catch(this.handleError);
   }
@@ -41,5 +41,12 @@ export class ArtGridService {
       albums[randomIndex] = valuePlaceholder;
     }
     return albums;
+  }
+
+  // TODO: WIP/ Note that is a public method!
+  public getNextAlbum(): AlbumFull {
+    let nextAlbum: AlbumFull = this.allAlbums.shift();
+    this.allAlbums.push(nextAlbum);
+    return nextAlbum;
   }
 }
