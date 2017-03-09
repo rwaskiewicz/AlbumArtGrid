@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { trigger, state, style } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
@@ -23,19 +23,14 @@ import { TimingService } from '../../timing/timing.service';
     ])
   ]
 })
-export class ArtCellComponent implements OnInit, OnChanges {
+export class ArtCellComponent implements OnChanges {
   @Input() identifier: number;
-  @Input() fullAlbum: AlbumFull;
+  @Input() primaryAlbum: AlbumFull;
   @Input() currentIndex: number;
+  secondaryAlbum: AlbumFull;
   private isFlipped = false;
-  private mainUrl = 'https://i.scdn.co/image/dfd044738243446dfe81a92e01a296dab21e43f1';
-  private altUrl = 'https://i.scdn.co/image/dfd044738243446dfe81a92e01a296dab21e43f1';
 
   constructor(private dialog: MdDialog, private timingService: TimingService, private artGridService: ArtGridService) {
-  }
-
-  // TODO: CONSIDER MOVING artGridService CALLS HERE.  IMPL OF MULTI STREAMS?
-  ngOnInit(): void {
   }
 
   // TODO: ngOnChanges isn't firing perhaps due to same value being emitted
@@ -45,20 +40,16 @@ export class ArtCellComponent implements OnInit, OnChanges {
     }
   }
 
-  openAlbumDetails() {
-    let dialogRef = this.dialog.open(ArtCellModalComponent);
-    dialogRef.componentInstance.title = this.fullAlbum.name;
-    dialogRef.componentInstance.body = this.fullAlbum.artists[0].name;
+  private changeState(): void {
+    let nextAlbum = this.artGridService.getNextAlbum();
+    this.isFlipped ? this.primaryAlbum = nextAlbum : this.secondaryAlbum = nextAlbum;
+
+    this.isFlipped = !this.isFlipped;
   }
 
-  changeState() {
-    let nextAlbum = this.artGridService.getNextAlbum();
-    if (this.isFlipped) {
-      this.mainUrl = nextAlbum.images[1].url;
-    } else {
-      this.altUrl = nextAlbum.images[1].url;
-    }
-    this.isFlipped = !this.isFlipped;
-    console.log(`Flip State is now: ${this.isFlipped} for ${this.currentIndex}`);
+  private openAlbumDetails() {
+    let dialogRef = this.dialog.open(ArtCellModalComponent);
+    dialogRef.componentInstance.title = this.primaryAlbum.name;
+    dialogRef.componentInstance.body = this.primaryAlbum.artists[0].name;
   }
 }
