@@ -56,8 +56,7 @@ export class ArtCellComponent implements OnChanges {
     this.isSelected = true;
 
     let dialogRef = this.dialog.open(ArtCellModalComponent);
-    dialogRef.componentInstance.title = currentAlbum.name;
-    dialogRef.componentInstance.body = currentAlbum.artists[0].name;
+    dialogRef.componentInstance.album = currentAlbum;
 
     this.dialog.afterAllClosed.subscribe(() => this.isSelected = false);
   }

@@ -1,5 +1,12 @@
-<h1 md-dialog-title>Album Title: {{title}}</h1>
-<p>Artist: {{body}}</p>
 <div md-dialog-actions>
   <button md-dialog-close (click)="dialogRef.close()">Close</button>
+</div>
+
+<h1 md-dialog-title>{{album.name}}</h1>
+<p>Artist: {{album?.artists[0].name}}</p>
+
+<img src={{album?.images[2].url}}>
+
+<div *ngFor="let track of album?.tracks.items">
+  Disc:{{track.disc_number}} #{{track.track_number}} - {{track.name}} - {{track.duration_ms}}
 </div>
