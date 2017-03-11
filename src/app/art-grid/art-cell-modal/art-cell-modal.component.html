@@ -8,5 +8,5 @@
 <img src={{album?.images[2].url}}>
 
 <div *ngFor="let track of album?.tracks.items">
-  Disc:{{track.disc_number}} #{{track.track_number}} - {{track.name}} - {{track.duration_ms}}
+  Disc:{{track.disc_number}} #{{track.track_number}} - {{track.name}} - {{track.duration_ms | date:'m:ss' }}
 </div>
