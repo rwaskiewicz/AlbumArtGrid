@@ -3,10 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class WindowService {
   // TODO: Temporary placement/hardcoding
-  private albumArtWidthInPixels: number = 300;
-
-  // TODO: This doesn't handle resizing or anything
-  constructor() { }
+  private albumArtWidthInPixels = 300;
 
   calculateTotalNumberOfCells(): number {
     return this.calculateColumnCount() * this.calculateRowCount();
