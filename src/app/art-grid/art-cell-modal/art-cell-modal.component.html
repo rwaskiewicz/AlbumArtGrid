@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-sm-12">
       <div md-dialog-actions>
         <button md-dialog-close (click)="dialogRef.close()" class="glyphicon glyphicon-remove pull-right"></button>
       </div>
@@ -8,10 +8,10 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-3">
+    <div class="col-sm-3">
       <img src={{album?.images[1].url}} height="275" width="275">
     </div>
-    <div class="col-lg-9">
+    <div class="col-sm-9">
       <h1 md-dialog-title>{{album.name}}</h1>
       <!-- TODO: Issue if date is of year granularity - defaults to 1969 -->
       <h2>{{album?.artists[0].name}} - {{album?.release_date | date:'y'}}</h2>
@@ -19,9 +19,9 @@
     </div>
   </div>
   <br/>
-  <div class="col-md-12">
+  <div class="col-sm-12" style="overflow: scroll; height: 40vh">
     <div *ngFor="let track of album?.tracks.items">
-      Disc:{{track.disc_number}} #{{track.track_number}} - {{track.name}} - {{track.duration_ms | date:'m:ss' }}
+      {{track.track_number}} - {{track.name}} - {{track.duration_ms | date:'m:ss' }}
     </div>
   </div>
 </div>
