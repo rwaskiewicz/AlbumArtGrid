@@ -6,8 +6,6 @@ import { AlbumFull } from '../../dto/album-full';
 import { ArtGridService } from '../art-grid.service';
 import { ArtCellModalComponent } from '../art-cell-modal/art-cell-modal.component';
 
-import { TimingService } from '../../timing/timing.service';
-
 @Component({
   selector: 'art-cell',
   styleUrls: ['./art-cell.component.css'],
@@ -30,7 +28,7 @@ export class ArtCellComponent implements OnChanges {
   secondaryAlbum: AlbumFull;
   private isFlipped = false;
 
-  constructor(private dialog: MdDialog, private timingService: TimingService, private artGridService: ArtGridService) {
+  constructor(private dialog: MdDialog, private artGridService: ArtGridService) {
   }
 
   ngOnChanges(): void {
