@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
       <div md-dialog-actions>
@@ -6,20 +6,20 @@
       </div>
     </div>
   </div>
-
+  <br>
   <div class="row">
-    <div class="col-sm-3">
-      <img src={{album?.images[1].url}} height="275" width="275">
+    <div class="col-xs-12 col-lg-3">
+      <img src={{album?.images[1].url}} class="img-responsive">
     </div>
-    <div class="col-sm-9">
-      <h1 md-dialog-title>{{album.name}}</h1>
+    <div class="col-xs-12 col-lg-9">
+      <h1>{{album.name}}</h1>
       <!-- TODO: Issue if date is of year granularity - defaults to 1969 -->
       <h2>{{album?.artists[0].name}} - {{album?.release_date | date:'y'}}</h2>
       <h3>{{album?.label}}</h3>
     </div>
   </div>
-  <br/>
-  <div class="col-sm-12" style="overflow: scroll; height: 40vh">
+  <br>
+  <div class="col-sm-12" style="overflow-y: scroll; height: 40vh">
     <div *ngFor="let track of album?.tracks.items">
       {{track.track_number}} - {{track.name}} - {{track.duration_ms | date:'m:ss' }}
     </div>
