@@ -1,17 +1,25 @@
 .album_card_container {
-    perspective: 1000;
+  perspective: 1000;
 }
 .album_card {
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transition: transform 1s;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 .album_card_side {
-    position: absolute;
-    backface-visibility: hidden;
-    user-select: none;
+  position: absolute;
+  backface-visibility: hidden;
+  user-select: none;
 }
 .album_card_back {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+button {
+  background-color: transparent;
+  border: none;
+  border-width: 0px;
+  box-sizing: inherit;
+  outline: none;
+  padding: 0px 0px 0px 0px;
 }

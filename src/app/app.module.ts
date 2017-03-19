@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     BrowserAnimationsModule,
     ArtGridModule,
-    MaterialModule.forRoot()
+    MaterialModule
   ],
   declarations: [
     AppComponent
