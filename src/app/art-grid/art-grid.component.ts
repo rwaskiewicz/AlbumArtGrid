@@ -31,7 +31,6 @@ export class ArtGridComponent implements OnInit {
 
     this.timingService.emitRandomIndex().subscribe(
       index => {
-        console.log('got index', index);
         this.index = index;
       }
     );

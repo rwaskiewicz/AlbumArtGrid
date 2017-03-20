@@ -40,7 +40,7 @@ export class ArtCellComponent implements OnChanges {
 
   private changeState(): void {
     if (!this.isSelected) {
-      let nextAlbum = this.artGridService.getNextAlbum();
+      const nextAlbum = this.artGridService.getNextAlbum();
       this.isFlipped ? this.primaryAlbum = nextAlbum : this.secondaryAlbum = nextAlbum;
 
       this.isFlipped = !this.isFlipped;
@@ -53,7 +53,7 @@ export class ArtCellComponent implements OnChanges {
 
     this.isSelected = true;
 
-    let dialogRef = this.dialog.open(ArtCellModalComponent);
+    const dialogRef = this.dialog.open(ArtCellModalComponent);
     dialogRef.componentInstance.album = currentAlbum;
 
     this.dialog.afterAllClosed.subscribe(() => this.isSelected = false);

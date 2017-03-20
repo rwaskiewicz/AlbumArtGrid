@@ -1,5 +1,5 @@
-import { Injectable, Output } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 
 import { WindowService } from '../window/window.service';
 

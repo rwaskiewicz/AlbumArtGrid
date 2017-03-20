@@ -34,8 +34,8 @@ export class ArtGridService {
 
   private shuffleAlbums(albums: AlbumFull[]) {
     for (let currentIndex = albums.length - 1; currentIndex > 0; currentIndex--) {
-      let randomIndex = Math.floor(Math.random() * (currentIndex + 1));
-      let valuePlaceholder = albums[currentIndex];
+      const randomIndex = Math.floor(Math.random() * (currentIndex + 1));
+      const valuePlaceholder = albums[currentIndex];
 
       albums[currentIndex] = albums[randomIndex];
       albums[randomIndex] = valuePlaceholder;
@@ -45,7 +45,7 @@ export class ArtGridService {
 
   // TODO: WIP/ Note that is a public method!
   public getNextAlbum(): AlbumFull {
-    let nextAlbum: AlbumFull = this.allAlbums.shift();
+    const nextAlbum: AlbumFull = this.allAlbums.shift();
     this.allAlbums.push(nextAlbum);
     return nextAlbum;
   }
