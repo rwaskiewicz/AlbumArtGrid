@@ -12,10 +12,10 @@ import { ArtCellModalComponent } from '../art-cell-modal/art-cell-modal.componen
   templateUrl: './art-cell.component.html',
   animations: [
     trigger('albumState', [
-      state('true', style({
+      state('1', style({
         transform: 'rotateY(180deg)',
       })),
-      state('false', style({
+      state('0', style({
         transform: 'rotateY(0deg)',
       }))
     ])
