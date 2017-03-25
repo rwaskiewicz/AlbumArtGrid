@@ -8,7 +8,8 @@
     "start": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "docs": "compodoc src -s -p src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
