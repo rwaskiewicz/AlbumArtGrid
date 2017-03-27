@@ -25,26 +25,34 @@ export class ArtCellComponent implements OnChanges {
   @Input() identifier: number;
   @Input() primaryAlbum: AlbumFull;
   @Input() currentIndex: number;
-  secondaryAlbum: AlbumFull;
+  private secondaryAlbum: AlbumFull;
   private isFlipped = false;
   private isSelected = false;
 
-  constructor(private dialog: MdDialog, private artGridService: ArtGridService) {
-  }
+  constructor(private dialog: MdDialog, private artGridService: ArtGridService) { }
 
   ngOnChanges(): void {
-    if (this.identifier === this.currentIndex) {
+    this.checkAndFlipCell();
+  }
+
+  private checkAndFlipCell() {
+    if (this.shouldCellFlip()) {
       this.changeState();
     }
   }
 
-  private changeState(): void {
-    if (!this.isSelected) {
-      const nextAlbum = this.artGridService.getNextAlbum();
-      this.isFlipped ? this.primaryAlbum = nextAlbum : this.secondaryAlbum = nextAlbum;
+  private shouldCellFlip(): boolean {
+    const isCellMarkedForFlipping = (this.identifier === this.currentIndex);
+    const isModalForCellShowing = this.isSelected;
 
-      this.isFlipped = !this.isFlipped;
-    }
+    return isCellMarkedForFlipping && !isModalForCellShowing;
+  }
+
+  private changeState(): void {
+    const nextAlbum = this.artGridService.getNextAlbum();
+    this.isFlipped ? this.primaryAlbum = nextAlbum : this.secondaryAlbum = nextAlbum;
+
+    this.isFlipped = !this.isFlipped;
   }
 
   private openAlbumDetails() {
