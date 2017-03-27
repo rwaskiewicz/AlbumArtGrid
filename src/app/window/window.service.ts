@@ -10,10 +10,10 @@ export class WindowService {
   }
 
   calculateColumnCount(): number {
-    return Math.floor(window.innerWidth / this.albumArtWidthInPixels);
+    return Math.ceil(window.innerWidth / this.albumArtWidthInPixels);
   }
 
   calculateRowCount(): number {
-    return Math.floor(window.innerHeight / this.albumArtWidthInPixels);
+    return Math.ceil(window.innerHeight / this.albumArtWidthInPixels);
   }
 }
